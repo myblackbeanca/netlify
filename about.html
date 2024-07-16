@@ -1,100 +1,54 @@
-<html>
-  <head>
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
-    <link
-      rel="stylesheet"
-      as="style"
-      onload="this.rel='stylesheet'"
-      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Manrope%3Awght%40400%3B500%3B700%3B800&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
-    />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+  <link rel="stylesheet" as="style" onload="this.rel='stylesheet'" href="https://fonts.googleapis.com/css2?display=swap&family=Manrope%3Awght%40400%3B500%3B700%3B800&family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" />
+  <link rel="stylesheet" href="https://cdn.tailwindcss.com?plugins=forms,container-queries"> 
+  <title>About Us - MINY</title>
+</head>
+<body style='font-family: Manrope, "Noto Sans", sans-serif;'>
+  <div class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden">
 
-    <title>Ganja Pigs International</title>
-    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+    <div class="flex items-center bg-white p-4 pb-2 justify-between"> 
+      <h2 class="text-[#111618] text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pl-12">MINY</h2> 
+    </div> 
 
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-    <script src="https://unpkg.com/react-vertical-timeline-component@3.3.3/dist/react-vertical-timeline-component.min.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/react-vertical-timeline-component@3.3.3/style.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.1/dist/umd/lucide.min.js"></script>
-  </head>
-  <body>
-    <div class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden" style='font-family: Manrope, "Noto Sans", sans-serif;'>
-      <!-- Previous content remains the same -->
-      
-      <!-- Timeline section -->
-      <div id="timeline-root"></div>
-
-      <!-- Rest of the content remains the same -->
+    <div class="@container">
+      <div class="@[480px]:p-4">
+        <div class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-start justify-end px-4 pb-10 @[480px]:px-10" 
+             style='background-image: linear-gradient(rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.8) 100%), url("https://via.placeholder.com/1440x600.png?text=Your+MINY+Hero+Banner");'> 
+          <div class="flex flex-col gap-2 text-left text-white">
+            <h1 class="text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:leading-tight @[480px]:tracking-[-0.033em]">
+              About MINY
+            </h1>
+            <h2 class="text-sm font-normal leading-normal @[480px]:text-base @[480px]:leading-normal">
+              [Your MINY tagline or brief description here]
+            </h2>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <script type="text/babel">
-      const { VerticalTimeline, VerticalTimelineElement } = ReactVerticalTimelineComponent;
-      const { Cannabis } = lucide;
+    <div class="flex flex-col gap-10 px-4 py-10 @container">
 
-      const timelineData = [
-        {
-          date: 'April 20, 2020',
-          title: 'Controversial 4/20 Party',
-          description: 'Hosted a marijuana party in Manhattan during COVID-19 pandemic. The event was raided by police for violating social distancing orders, resulting in over 40 arrests.',
-          icon: <Cannabis />,
-          media: '/api/placeholder/400/300'
-        },
-        {
-          date: 'October 2023',
-          title: 'First Annual Budstock Festival',
-          description: 'Organized the inaugural Budstock Music Festival/Harvest Fest/Freedom Concert.',
-          icon: <Cannabis />,
-          media: '/api/placeholder/400/300'
-        },
-        {
-          date: 'July 10, 2024',
-          title: '710 Event in New Jersey',
-          description: 'Hosted an event featuring Scrambld Yegs and VIBES Papers, serving as a precursor to Budstock.',
-          icon: <Cannabis />,
-          media: '/api/placeholder/400/300'
-        },
-        {
-          date: 'July 11, 2024',
-          title: 'NYC Activities',
-          description: 'Featured in a YouTube video titled "Ganja Pigs Lights up NYC", showcasing activities in New York City.',
-          icon: <Cannabis />,
-          media: '/api/placeholder/400/300'
-        },
-        {
-          date: 'August 9-11, 2024',
-          title: 'Second Annual Budstock Festival',
-          description: 'Organizing the second Budstock Music Festival/Harvest Fest/Freedom Concert in upstate New York.',
-          icon: <Cannabis />,
-          media: '/api/placeholder/400/300'
-        }
-      ];
+      <div class="flex flex-col gap-4">
+        <h1 class="text-[#111618] tracking-light text-[32px] font-bold leading-tight @[480px]:text-4xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] max-w-[720px]">
+          Our Mission
+        </h1>
+        <p class="text-[#111618] text-base font-normal leading-normal max-w-[720px]">
+          [Your content about MINY's mission, values, or story]
+          <img src="https://via.placeholder.com/800x400.png?text=Image+Placeholder" alt="MINY Image" class="w-full mt-4 rounded-lg"> 
+        </p>
+      </div>
 
-      const GanjaPigsTimeline = () => {
-        return (
-          <div className="p-4">
-            <h1 className="text-3xl font-bold mb-6 text-center">Ganja Pigs International Timeline</h1>
-            <VerticalTimeline>
-              {timelineData.map((item, index) => (
-                <VerticalTimelineElement
-                  key={index}
-                  className="vertical-timeline-element--work"
-                  date={item.date}
-                  iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-                  icon={item.icon}
-                >
-                  <h3 className="vertical-timeline-element-title">{item.title}</h3>
-                  <p>{item.description}</p>
-                  <img src={item.media} alt={item.title} className="mt-4 rounded-lg" />
-                </VerticalTimelineElement>
-              ))}
-            </VerticalTimeline>
-          </div>
-        );
-      };
+      </div> 
 
-      ReactDOM.render(<GanjaPigsTimeline />, document.getElementById('timeline-root'));
-    </script>
-  </body>
+    <footer class="flex flex-col gap-6 px-5 py-10 text-center @container">
+      <p class="text-[#617c89] text-base font-normal leading-normal">© 2024 MINY. All Rights Reserved</p> 
+    </footer>
+    <div class="h-5 bg-white"></div>
+  </div> 
+</body>
 </html>
