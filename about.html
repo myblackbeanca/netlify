@@ -1,1 +1,101 @@
 
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Manrope%3Awght%40400%3B500%3B700%3B800&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
+
+    <title>Ganja Pigs International</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script src="https://unpkg.com/react-vertical-timeline-component@3.3.3/dist/react-vertical-timeline-component.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/react-vertical-timeline-component@3.3.3/style.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.1/dist/umd/lucide.min.js"></script>
+  </head>
+  <body>
+    <div class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden" style='font-family: Manrope, "Noto Sans", sans-serif;'>
+      <!-- Previous content remains the same -->
+      
+      <!-- Timeline section -->
+      <div id="timeline-root"></div>
+
+      <!-- Rest of the content remains the same -->
+    </div>
+
+    <script type="text/babel">
+      const { VerticalTimeline, VerticalTimelineElement } = ReactVerticalTimelineComponent;
+      const { Cannabis } = lucide;
+
+      const timelineData = [
+        {
+          date: 'April 20, 2020',
+          title: 'Controversial 4/20 Party',
+          description: 'Hosted a marijuana party in Manhattan during COVID-19 pandemic. The event was raided by police for violating social distancing orders, resulting in over 40 arrests.',
+          icon: <Cannabis />,
+          media: '/api/placeholder/400/300'
+        },
+        {
+          date: 'October 2023',
+          title: 'First Annual Budstock Festival',
+          description: 'Organized the inaugural Budstock Music Festival/Harvest Fest/Freedom Concert.',
+          icon: <Cannabis />,
+          media: '/api/placeholder/400/300'
+        },
+        {
+          date: 'July 10, 2024',
+          title: '710 Event in New Jersey',
+          description: 'Hosted an event featuring Scrambld Yegs and VIBES Papers, serving as a precursor to Budstock.',
+          icon: <Cannabis />,
+          media: '/api/placeholder/400/300'
+        },
+        {
+          date: 'July 11, 2024',
+          title: 'NYC Activities',
+          description: 'Featured in a YouTube video titled "Ganja Pigs Lights up NYC", showcasing activities in New York City.',
+          icon: <Cannabis />,
+          media: '/api/placeholder/400/300'
+        },
+        {
+          date: 'August 9-11, 2024',
+          title: 'Second Annual Budstock Festival',
+          description: 'Organizing the second Budstock Music Festival/Harvest Fest/Freedom Concert in upstate New York.',
+          icon: <Cannabis />,
+          media: '/api/placeholder/400/300'
+        }
+      ];
+
+      const GanjaPigsTimeline = () => {
+        return (
+          <div className="p-4">
+            <h1 className="text-3xl font-bold mb-6 text-center">Ganja Pigs International Timeline</h1>
+            <VerticalTimeline>
+              {timelineData.map((item, index) => (
+                <VerticalTimelineElement
+                  key={index}
+                  className="vertical-timeline-element--work"
+                  date={item.date}
+                  iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+                  icon={item.icon}
+                >
+                  <h3 className="vertical-timeline-element-title">{item.title}</h3>
+                  <p>{item.description}</p>
+                  <img src={item.media} alt={item.title} className="mt-4 rounded-lg" />
+                </VerticalTimelineElement>
+              ))}
+            </VerticalTimeline>
+          </div>
+        );
+      };
+
+      ReactDOM.render(<GanjaPigsTimeline />, document.getElementById('timeline-root'));
+    </script>
+  </body>
+</html>
