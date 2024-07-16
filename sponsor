@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budstock Sponsorship Proposal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Add your custom styles here if needed */
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #13ec80; /* Green color */
+            color: #111814;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #0fcb70; /* Slightly darker green on hover */
+        }
+
+        .icon {
+            width: 24px;
+            height: 24px;
+        }
+
+        .package {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .package:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .site-footer {
+            border-top: 1px solid #283930;
+        }
+
+        .contact-info ul li a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .contact-info ul li a .icon {
+            width: 24px;
+            height: 24px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="site-header flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#283930] px-4 sm:px-10 py-3 bg-[#111814]">
+        <div class="flex items-center gap-4">
+            <a href="/" class="flex items-center gap-4" aria-label="GanjaPigs Home">
+                <img src="https://via.placeholder.com/150x150?text=Budstock+Logo" alt="Budstock Logo" width="150" height="150" class="w-12 h-12 sm:w-16 sm:h-16 object-contain">
+                <h1 class="text-white text-lg sm:text-xl font-bold leading-tight tracking-[-0.015em]">Budstock</h1>
+            </a>
+        </div>
+        <nav class="flex flex-1 justify-end gap-8" aria-label="Main Navigation">
+            <ul class="flex gap-2 list-none">
+                <li>
+                    <a href="#home" class="text-white hover:text-[#13ec80] text-sm sm:text-base font-medium leading-normal tracking-[0.015em]">Home</a>
+                </li>
+                <li>
+                    <a href="#about" class="text-white hover:text-[#13ec80] text-sm sm:text-base font-medium leading-normal tracking-[0.015em]">About</a>
+                </li>
+                <li>
+                    <a href="#sponsorship" class="text-white hover:text-[#13ec80] text-sm sm:text-base font-medium leading-normal tracking-[0.015em]">Sponsorship Packages</a>
+                </li>
+                <li>
+                    <a href="#media" class="text-white hover:text-[#13ec80] text-sm sm:text-base font-medium leading-normal tracking-[0.015em]">Media</a>
+                </li>
+                <li>
+                    <a href="#contact" class="text-white hover:text-[#13ec80] text-sm sm:text-base font-medium leading-normal tracking-[0.015em]">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero-section flex min-h-[400px] bg-cover bg-center bg-no-repeat items-center justify-center" style='background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://via.placeholder.com/1440x600?text=Budstock+Hero+Image");'>
+        <div class="text-center text-white">
+            <h1 class="text-4xl sm:text-6xl font-bold mb-4">Become a Budstock Sponsor</h1>
+            <p class="text-lg sm:text-xl mb-6">Align your brand with the ultimate celebration of music & culture.</p>
+            <a href="#sponsorship" class="btn">Explore Sponsorship Packages</a>
+        </div>
+    </section>
+
+    <section id="about" class="about-section py-16 bg-[#111814] text-white text-center px-4 sm:px-10 md:px-20 lg:px-40">
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4">About Budstock</h2>
+        <p class="text-lg mb-8">
+            Budstock is more than just a music festival - it’s a movement. We bring together music lovers, artists, and businesses for a weekend of unforgettable experiences. As a sponsor, you’ll tap into a passionate community and elevate your brand presence.
+        </p>
+    </section>
+
+    <section id="sponsorship" class="sponsorship-section py-16 bg-gray-100 text-gray-800">
+        <div class="container mx-auto px-4 sm:px-10 md:px-20 lg:px-40">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-8">Sponsorship Packages</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="package bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-[#13ec80] mb-4">Title Sponsor</h3>
+                    <p class="text-gray-600 mb-6">
+                        $25,000
+                    </p>
+                    <ul class="list-disc pl-6 mb-6 text-gray-700">
+                        <li>Exclusive Branding Rights</li>
+                        <li>Premium Vendor Spots</li>
+                        <li>Media Mentions</li>
+                        <li>Honeysuckle Magazine Coverage</li>
+                        <li>VIP Access</li>
+                    </ul>
+                    <a href="#contact" class="btn">Inquire Now</a>
+                </div>
+                <div class="package bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-[#13ec80] mb-4">Premium Sponsor</h3>
+                    <p class="text-gray-600 mb-6">
+                        $5,000
+                    </p>
+                    <ul class="list-disc pl-6 mb-6 text-gray-700">
+                        <li>Branding Visibility</li>
+                        <li>High-Traffic Vendor Spots</li>
+                        <li>Media Coverage</li>
+                        <li>Honeysuckle Magazine Coverage</li>
+                        <li>Enhanced Networking</li>
+                    </ul>
+                    <a href="#contact" class="btn">Inquire Now</a>
+                </div>
+                <div class="package bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-[#13ec80] mb-4">Legacy Sponsor</h3>
+                    <p class="text-gray-600 mb-6">
+                        $500
+                    </p>
+                    <ul class="list-disc pl-6 mb-6 text-gray-700">
+                        <li>Vendor Booth</li>
+                        <li>Vendor Listing</li>
+                        <li>Community Engagement</li>
+                        <li>Honeysuckle Magazine Mention</li>
+                    </ul>
+                    <a href="#contact" class="btn">Inquire Now</a>
+                </div>
+            </div>
+            <div class="custom text-center mt-12">
+                <h3 class="text-2xl font-bold text-[#13ec80] mb-4">Custom Sponsorship</h3>
+                <p class="text-gray-800 mb-6">
+                    Have unique requirements? We’re happy to craft a custom sponsorship package that perfectly aligns with your brand goals.
+                </p>
+                <a href="#contact" class="btn">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="media" class="media-section py-16 bg-[#111814] text-white">
+        <div class="container mx-auto px-4 sm:px-10 md:px-20 lg:px-40">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-8">Media Coverage</h2>
+            <p class="text-center text-lg mb-8">
+                Budstock has been featured in... (add your media mentions and logos here)
+            </p>
+            <!-- Placeholder for video embedding -->
+            <div class="video-embed-container">
+                <iframe src="https://www.youtube.com/embed/your-video-id" frameborder="0" allowfullscreen class="w-full h-64"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section py-16 bg-gray-100 text-gray-800">
+        <div class="container mx-auto px-4 sm:px-10 md:px-20 lg:px-40">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-8">Contact Us</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="contact-form">
+                    <form action="mailto:ceo@ganjapigs.com?subject=Budstock Sponsorship Inquiry&body=Hi GanjaPigs Team,%0D%0A%0D%0AI am interested in learning more about the sponsorship opportunities for Budstock.%0D%0A%0D%0AName: %0D%0AEmail: %0D%0AMessage:%0D%0A" method="post" enctype="text/plain">
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-700 font-bold mb-2">Your Name:</label>
+                            <input type="text" id="name" name="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 font-bold mb-2">Your Email:</label>
+                            <input type="email" id="email" name="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="block text-gray-700 font-bold mb-2">Your Message:</label>
+                            <textarea id="message" name="message" rows="5" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required></textarea>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <button class="bg-[#13ec80] hover:bg-[#0fcb70] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+                                Send
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h3 class="text-lg font-bold mb-4">Payment Options:</h3>
+                    <ul class="list-disc pl-6">
+                        <li>
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="text-[#13ec80] hover:underline">
+                                <img src="https://via.placeholder.com/24x24?text=PP" alt="PayPal" class="icon"> PayPal
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="text-[#13ec80] hover:underline">
+                                <img src="https://via.placeholder.com/24x24?text=CA" alt="Cash App" class="icon"> Cash App
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="text-[#13ec80] hover:underline">
+                                <img src="https://via.placeholder.com/24x24?text=BTC" alt="Bitcoin" class="icon"> Bitcoin
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="text-[#13ec80] hover:underline">
+                                <img src="https://via.placeholder.com/24x24?text=Z" alt="Zelle" class="icon"> Zelle
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer bg-[#111814] py-6 mt-8">
+        <div class="container mx-auto text-center text-white">
+            <p>© 2024 Budstock. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
