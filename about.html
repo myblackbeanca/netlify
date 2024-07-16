@@ -1,64 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
-  <link rel="stylesheet" as="style" onload="this.rel='stylesheet'" href="https://fonts.googleapis.com/css2?display=swap&family=Manrope%3Awght%400%3B500%3B700%3B800&family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" />
-  <link rel="stylesheet" href="https://cdn.tailwindcss.com?plugins=forms,container-queries"> 
-  <title>About Us - MINY</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ganja Pigs International</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header .logo img {
+            height: 50px;
+            margin: 0 10px;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        nav ul li a:hover {
+            background-color: #45a049;
+        }
+        .hero {
+            background: url('/api/placeholder/1200/600') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        .hero h1 {
+            font-size: 3em;
+        }
+        .hero p {
+            font-size: 1.5em;
+        }
+        .hero .btn {
+            background-color: #e74c3c;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+        }
+        section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+        section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .event {
+            background-color: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .event h3 {
+            font-size: 2em;
+            color: #4CAF50;
+        }
+        .event p {
+            text-align: left;
+            font-size: 1.2em;
+        }
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        footer ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 10px;
+            display: flex;
+            justify-content: center;
+        }
+        footer ul li {
+            margin: 0 10px;
+        }
+        footer ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        footer .social-media a img {
+            height: 30px;
+            margin: 0 10px;
+        }
+        footer p {
+            margin: 0;
+        }
+    </style>
 </head>
-<body style='font-family: Manrope, "Noto Sans", sans-serif;'>
-  <div class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden">
-
-    <div class="flex items-center bg-white p-4 pb-2 justify-between"> 
-      <h2 class="text-[#111618] text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pl-12">MINY</h2> 
-    </div> 
-
-    <div class="@container">
-      <div class="@[480px]:p-4">
-        <div class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-start justify-end px-4 pb-10 @[480px]:px-10" 
-             style='background-image: linear-gradient(rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.8) 100%), url("https://via.placeholder.com/1440x600.png?text=Your+MINY+Hero+Banner");'> 
-          <div class="flex flex-col gap-2 text-left text-white">
-            <h1 class="text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:leading-tight @[480px]:tracking-[-0.033em]">
-              About MINY
-            </h1>
-            <h2 class="text-sm font-normal leading-normal @[480px]:text-base @[480px]:leading-normal">
-              [Your MINY tagline or brief description here]
-            </h2>
-          </div>
+<body>
+    <header>
+        <div class="logo">
+            <img src="/api/placeholder/50/50" alt="Ganja Pigs Logo">
         </div>
-      </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>Welcome to Ganja Pigs International</h1>
+        <p>A New York legacy brand at the forefront of cannabis culture and advocacy</p>
+        <a href="#events" class="btn">Explore Our Events</a>
     </div>
 
-    <div class="flex flex-col gap-10 px-4 py-10 @container">
+    <section id="events">
+        <h2>Our Events</h2>
+        <div class="event">
+            <h3>Budstock Festival</h3>
+            <p>Our flagship event, the annual Budstock Music Festival/Harvest Fest/Freedom Concert, featuring legal cannabis sales on-site.</p>
+            <a href="#" class="btn">Learn More</a>
+        </div>
+        <div class="event">
+            <h3>Educational Initiatives</h3>
+            <p>Our Cannabis Growers Showcase provides a platform for licensed cultivators to educate attendees.</p>
+            <a href="#" class="btn">Discover</a>
+        </div>
+        <div class="event">
+            <h3>Community Events</h3>
+            <p>From intimate "GANJA EMPIRE THURSDAZE" gatherings to 710 celebrations, we cater to all facets of cannabis culture.</p>
+            <a href="#" class="btn">Join Us</a>
+        </div>
+    </section>
 
-      <div class="flex flex-col gap-4">
-        <h1 class="text-[#111618] tracking-light text-[32px] font-bold leading-tight @[480px]:text-4xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] max-w-[720px]">
-          What We Do
-        </h1>
-        <p class="text-[#111618] text-base font-normal leading-normal max-w-[720px]">
-          [Content about MINY's work and what you do] 
-          <img src="https://via.placeholder.com/800x400.png?text=Image+Placeholder" alt="MINY Image 1" class="w-full mt-4 rounded-lg"> 
-        </p>
-      </div>
+    <section id="about">
+        <h2>About Ganja Pigs International</h2>
+        <p>Born in the heart of New York, Ganja Pigs started as a grassroots movement, hosting intimate gatherings for cannabis enthusiasts. Under the visionary leadership of Jonathan Rader, we've evolved into a cultural phenomenon, orchestrating large-scale events that celebrate the intersection of cannabis, music, and community.</p>
+        <a href="#" class="btn">Our Story</a>
+    </section>
 
-      <div class="flex flex-col gap-4">
-        <h1 class="text-[#111618] tracking-light text-[32px] font-bold leading-tight @[480px]:text-4xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] max-w-[720px]">
-          Our Impact
-        </h1>
-        <p class="text-[#111618] text-base font-normal leading-normal max-w-[720px]">
-          [Content about the impact of MINY's work]
-          <img src="https://via.placeholder.com/800x400.png?text=Image+Placeholder" alt="MINY Image 2" class="w-full mt-4 rounded-lg"> 
-        </p>
-      </div>
-
-    </div> 
-
-    <footer class="flex flex-col gap-6 px-5 py-10 text-center @container">
-      <p class="text-[#617c89] text-base font-normal leading-normal">© 2024 MINY. All Rights Reserved</p> 
+    <footer>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="social-media">
+            <a href="#"><img src="/api/placeholder/30/30" alt="Facebook"></a>
+            <a href="#"><img src="/api/placeholder/30/30" alt="Twitter"></a>
+            <a href="#"><img src="/api/placeholder/30/30" alt="Instagram"></a>
+        </div>
+        <p>&copy; 2024 Ganja Pigs International. All Rights Reserved</p>
     </footer>
-    <div class="h-5 bg-white"></div>
-  </div> 
 </body>
 </html>
