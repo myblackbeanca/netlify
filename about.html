@@ -30,7 +30,24 @@
 </head>
 <body>
     <div class="relative flex min-h-screen flex-col bg-[#111814] overflow-x-hidden">
-        <!-- Header Section (Same as before) -->
+        <header class="site-header flex flex-wrap items-center justify-between whitespace-nowrap border-b border-solid border-b-[#283930] px-4 sm:px-10 py-3">
+    <div class="flex items-center gap-4">
+        <a href="/" class="flex items-center gap-4" aria-label="GanjaPigs Home">
+            <img src="/img/ganjapigs-logo.png" alt="GanjaPigs Logo" width="150" height="150" class="w-12 h-12 sm:w-16 sm:h-16 object-contain">
+            <h1 class="text-[#9db9ab] text-lg sm:text-xl font-bold leading-tight tracking-[-0.015em]">GanjaPigs</h1>
+        </a>
+    </div>
+    <nav class="flex flex-1 justify-end gap-4 sm:gap-8 mt-4 sm:mt-0 w-full sm:w-auto" aria-label="Main Navigation">
+        <a href="/sponsors.html" class="text-[#9db9ab] hover:text-[#13ec80] transition-colors duration-300">Sponsors</a>
+        <a href="/about.html" class="text-[#9db9ab] hover:text-[#13ec80] transition-colors duration-300">About Ganja Pigs</a>
+        <a href="https://www.instagram.com/budstockny" target="_blank" rel="noopener noreferrer" aria-label="GanjaPigs Instagram" class="flex items-center justify-center overflow-hidden rounded-full h-10 bg-[#283930] text-[#9db9ab] gap-2 text-sm font-bold leading-normal tracking-[0.015em] px-2.5">
+            <span class="sr-only">Follow us on Instagram</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 256 256" aria-hidden="true">
+                <path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"></path>
+            </svg>
+        </a>
+    </nav>
+</header>
 
         <main class="flex-grow">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
