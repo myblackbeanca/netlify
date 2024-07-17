@@ -462,9 +462,44 @@
           </h2>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8 p-4">
             <div class="contact-form">
-              <form action="https://script.google.com/macros/s/AKfycbwbUDdtSEtr4ZFy7TbUz8v_YjrESqt-rDi-Jz22mWwVzpJ7v0PQTzUExLWXjPc9hRl6/exec" method="post">
-    <!-- Your form fields here -->
+            <form action="https://script.google.com/macros/s/AKfycbwbUDdtSEtr4ZFy7TbUz8v_YjrESqt-rDi-Jz22mWwVzpJ7v0PQTzUExLWXjPc9hRl6/exec" method="post" id="contactForm">
+  <div class="mb-4">
+    <label for="name" class="block text-gray-400 font-bold mb-2">Your Name:</label>
+    <input type="text" id="name" name="name"
+      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+      required>
+  </div>
+  <div class="mb-4">
+    <label for="email" class="block text-gray-400 font-bold mb-2">Your Email:</label>
+    <input type="email" id="email" name="email"
+      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+      required>
+  </div>
+  <div class="mb-4">
+    <label for="message" class="block text-gray-400 font-bold mb-2">Your Message:</label>
+    <textarea id="message" name="message" rows="5"
+      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+      required></textarea>
+  </div>
+  <div class="flex items-center justify-between">
+    <button class="bg-[#13ec80] hover:bg-[#0fcb70] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">Send</button>
+  </div>
 </form>
+
+<script>
+  document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent default form submission
+
+    var formData = new FormData(this);
+
+    google.script.run.withSuccessHandler(onSuccess).doPost(formData); 
+  });
+
+  function onSuccess(message) {
+    alert(message);
+    document.getElementById("contactForm").reset();
+  }
+</script>
             </div>
             <div class="contact-info">
               <h3 class="text-lg font-bold text-white mb-4">Payment Options:</h3>
