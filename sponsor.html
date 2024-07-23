@@ -71,6 +71,23 @@
     .payment-icons li a:hover {
       color: #0fcb70;
     }
+
+    /* Add fluid typography */
+    :root {
+      --fluid-typography-ratio: 1vw;
+    }
+
+    body {
+      font-size: clamp(16px, calc(16px + var(--fluid-typography-ratio)), 20px);
+    }
+
+    h1 {
+      font-size: clamp(24px, calc(24px + 2 * var(--fluid-typography-ratio)), 48px);
+    }
+
+    h2 {
+      font-size: clamp(20px, calc(20px + var(--fluid-typography-ratio)), 36px);
+    }
   </style>
 </head>
 
@@ -104,11 +121,11 @@
         </nav>
       </header>
 
-      <div class="container mx-auto px-4 sm:px-10 md:px-20 lg:px-40 flex flex-1 justify-center py-5"> 
+      <div class="container mx-auto px-4 sm:px-10 md:px-20 lg:px-40 flex flex-1 justify-center py-5">
         <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
 
           <!-- Sponsorship Introduction -->
-          <div class="p-4"> 
+          <div class="p-4">
             <div
               class="flex min-h-[300px] sm:min-h-[480px] flex-col gap-4 sm:gap-6 bg-cover bg-center bg-no-repeat rounded-xl items-center justify-center p-4"
               style='background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("https://cdn.getmidnight.com/ee9375a9e35b070b930b27b8e868dc1c/2024/07/Ganja-Pigs-Budstock-2023-Alex-Long-8.JPG");'>
@@ -123,30 +140,28 @@
                 </h2>
               </div>
               <a href="#sponsorship"
-                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#13ec80] text-[#111814] text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]">
+                class="flex w-full sm:w-auto min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#13ec80] text-[#111814] text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]">
                 <span class="truncate">View Sponsorship Offers</span>
               </a>
             </div>
           </div>
 
           <!-- Overview Section -->
-          <h2
-            class="text-white text-xl sm:text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5 mobile-text-center">
+          <h2 class="text-white text-xl sm:text-2xl font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">
             Overview</h2>
-          <p class="text-white text-base font-normal leading-normal pb-3 pt-1 px-4 mobile-text-center">
+          <p class="text-white text-base sm:text-lg font-normal leading-relaxed pb-3 pt-1 px-4">
             The Second Annual Budstock Music Festival is a vibrant celebration of music, culture, and community, set to
             take place at Electric Echo Lake. This year's festival promises an exciting lineup of music concerts and a
             Harvest Fest, creating a unique and immersive experience for all attendees.
           </p>
-          <h3>About Ganja Pigs</h3>
-          <p class="text-white text-base font-normal leading-normal pb-3 pt-1 px-4 mobile-text-center">Ganja Pigs is
+          <h3 class="text-white text-lg sm:text-xl font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">About
+            Ganja Pigs</h3>
+          <p class="text-white text-base sm:text-lg font-normal leading-relaxed pb-3 pt-1 px-4">Ganja Pigs is
             dedicated to creating unique events that bring communities together through music, art, and culture. Our
             collaboration with Honeysuckle Magazine ensures extensive coverage across New York.</p>
 
           <!-- Sponsorship Packages Section -->
-          </h2>
-          <div
-            class="grid grid-cols-[repeat(auto-fit,minmax(228px,1fr))] gap-2.5 px-4 py-3 @3xl:grid-cols-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 px-4 py-3" id="sponsorship">
             <div class="flex flex-1 flex-col gap-4 rounded-lg border border-solid border-[#3b5447] bg-[#1c2721] p-6">
               <div class="flex flex-col gap-1">
                 <div class="flex items-center justify-between">
@@ -181,7 +196,7 @@
                     <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor"
                       viewBox="0 0 256 256">
                       <path
-                        d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z">
+                        d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34,11.32,11.32Z">
                       </path>
                     </svg>
                   </div>
@@ -362,35 +377,37 @@
               </div>
             </div>
           </div>
+
           <!-- News & Media Section -->
           <div class="p-4">
             <div
               class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat rounded-xl items-start justify-end px-4 pb-10 relative"
               style='background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("https://cdn.getmidnight.com/ee9375a9e35b070b930b27b8e868dc1c/2024/07/Ganja-Pigs-Budstock-2023-Jadakiss-Alex-Long.JPG");'>
 
-              <div class="absolute bottom-4 left-4">
+              <div class="absolute bottom-4 left-4 right-4">
                 <div class="flex flex-col gap-2 text-left text-white">
                   <h1
-                    class="text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]">
+                    class="text-3xl sm:text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]">
                     Budstock in the News
                   </h1>
                   <h2
-                    class="text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">
+                    class="text-sm sm:text-base font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">
                     See what people are saying about Budstock!
                   </h2>
                 </div>
                 <a href="https://honeysucklemag.com/ganja-pigs-710-new-jersey-budstock-festival-new-york-cannabis/"
-                  target="_blank" rel="noopener noreferrer" class="btn mb-4">Read on Honeysuckle</a>
+                  target="_blank" rel="noopener noreferrer"
+                  class="btn mt-4 inline-block w-full sm:w-auto text-center">Read on Honeysuckle</a>
               </div>
 
             </div>
           </div>
+
           <!-- Budstock Highlight Section -->
-          <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 p-4">
             <div class="flex flex-col gap-3 pb-3">
-              <div class="w-full bg-center bg-no-repeat rounded-xl overflow-hidden"
-                style='background-image: url("highlight1.png");'>
-                <img src="highlight1.png" alt="Community focused Festivals" class="w-full h-auto object-cover">
+              <div class="w-full bg-center bg-no-repeat rounded-xl overflow-hidden aspect-video">
+                <img src="highlight1.png" alt="Community focused Festivals" class="w-full h-full object-cover">
               </div>
               <div>
                 <p class="text-white text-base font-medium leading-normal">Community focused Festivals</p>
@@ -399,9 +416,8 @@
               </div>
             </div>
             <div class="flex flex-col gap-3 pb-3">
-              <div class="w-full bg-center bg-no-repeat rounded-xl overflow-hidden"
-                style='background-image: url("highlight2.png");'>
-                <img src="highlight2.png" alt="Multi-Day Immersive Experience" class="w-full h-auto object-cover">
+              <div class="w-full bg-center bg-no-repeat rounded-xl overflow-hidden aspect-video">
+                <img src="highlight2.png" alt="Multi-Day Immersive Experience" class="w-full h-full object-cover">
               </div>
               <div>
                 <p class="text-white text-base font-medium leading-normal">Multi-Day Immersive Experience</p>
@@ -410,10 +426,10 @@
               </div>
             </div>
             <div class="flex flex-col gap-3 pb-3">
-              <div class="w-full bg-center bg-no-repeat rounded-xl overflow-hidden"
-                style='background-image: url("https://images.unsplash.com/photo-1590682680695-43b964a3ae17?q=80&w=2500&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");'>
-                <img src="https://images.unsplash.com/photo-1590682680695-43b964a3ae17?q=80&w=2500&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  alt="Cannabis Growers Showcase" class="w-full h-auto object-cover">
+              <div class="w-full bg-center bg-no-repeat rounded-xl overflow-hidden aspect-video">
+                <img
+                  src="https://images.unsplash.com/photo-1590682680695-43b964a3ae17?q=80&w=2500&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="Cannabis Growers Showcase" class="w-full h-full object-cover">
               </div>
               <div>
                 <p class="text-white text-base font-medium leading-normal">Cannabis Growers Showcase</p>
@@ -422,9 +438,8 @@
               </div>
             </div>
             <div class="flex flex-col gap-3 pb-3">
-              <div class="w-full bg-center bg-no-repeat rounded-xl overflow-hidden"
-                style='background-image: url("highlight4.png");'>
-                <img src="highlight4.png" alt="Curated Bud Bar" class="w-full h-auto object-cover">
+              <div class="w-full bg-center bg-no-repeat rounded-xl overflow-hidden aspect-video">
+                <img src="highlight4.png" alt="Curated Bud Bar" class="w-full h-full object-cover">
               </div>
               <div>
                 <p class="text-white text-base font-medium leading-normal">Curated Bud Bar</p>
@@ -433,14 +448,15 @@
               </div>
             </div>
             <div class="flex flex-col gap-3 pb-3">
-              <div class="w-full bg-center bg-no-repeat rounded-xl overflow-hidden"
-                style='background-image: url("https://cdn.getmidnight.com/ee9375a9e35b070b930b27b8e868dc1c/2024/07/Ganja-Pigs-Budstock-2023-Jadakiss-Alex-Long.JPG");'>
-                <img src="https://cdn.getmidnight.com/ee9375a9e35b070b930b27b8e868dc1c/2024/07/Ganja-Pigs-Budstock-2023-Jadakiss-Alex-Long.JPG"
-                  alt="Diverse Entertainment" class="w-full h-auto object-cover">
+              <div class="w-full bg-center bg-no-repeat rounded-xl overflow-hidden aspect-video">
+                <img
+                  src="https://cdn.getmidnight.com/ee9375a9e35b070b930b27b8e868dc1c/2024/07/Ganja-Pigs-Budstock-2023-Jadakiss-Alex-Long.JPG"
+                  alt="Diverse Entertainment" class="w-full h-full object-cover">
               </div>
               <div>
                 <p class="text-white text-base font-medium leading-normal">Diverse Entertainment</p>
-                <p class="text-[#9db9ab] text-sm font-normal leading-normal">Live music, celebrity appearances, and more!
+                <p class="text-[#9db9ab] text-sm font-normal leading-normal">Live music, celebrity appearances, and
+                  more!
                 </p>
               </div>
             </div>
@@ -449,18 +465,20 @@
           <!-- Video Embed Section -->
           <div class="flex flex-col items-center mt-8 p-4">
             <div class="video-embed-container w-full max-w-[800px]">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/JYNZa4KXPl8"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen></iframe>
+              <div class="relative pb-[56.25%] h-0 overflow-hidden">
+                <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/JYNZa4KXPl8"
+                  title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen></iframe>
+              </div>
             </div>
             <a href="https://www.eventbrite.com/e/second-annual-budstock-music-festivalharvest-festfreedom-concert-tickets-835504756217?aff=erelexpmlt"
-              target="_blank" rel="noopener noreferrer" class="btn mt-4">Grab a Budstock Festival Pass</a>
+              target="_blank" rel="noopener noreferrer" class="btn mt-4 w-full sm:w-auto text-center">Grab a Budstock
+              Festival Pass</a>
           </div>
 
           <!-- Contact Section -->
-          <h2
-            class="text-white text-xl sm:text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5 mobile-text-center">
+          <h2 class="text-white text-xl sm:text-2xl font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">
             Contact Us
           </h2>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8 p-4">
@@ -488,7 +506,7 @@
                 </div>
                 <div class="flex items-center justify-between">
                   <button
-                    class="bg-[#13ec80] hover:bg-[#0fcb70] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                    class="bg-[#13ec80] hover:bg-[#0fcb70] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full sm:w-auto"
                     type="submit">Send</button>
                 </div>
               </form>
@@ -522,24 +540,24 @@
             </div>
             <div class="contact-info">
               <h3 class="text-lg font-bold text-white mb-4">Payment Options:</h3>
-              <ul class="payment-icons list-none pl-0">
+              <ul class="payment-icons list-none pl-0 flex flex-wrap gap-4">
                 <li>
-                  <a href="#" target="_blank" rel="noopener noreferrer" title="PayPal">
+                  <a href="#" target="_blank" rel="noopener noreferrer" title="PayPal" class="text-3xl sm:text-4xl">
                     <i class="fab fa-paypal"></i>
                   </a>
                 </li>
                 <li>
-                  <a href="#" target="_blank" rel="noopener noreferrer" title="Cash App">
+                  <a href="#" target="_blank" rel="noopener noreferrer" title="Cash App" class="text-3xl sm:text-4xl">
                     <i class="fab fa-cash-app"></i>
                   </a>
                 </li>
                 <li>
-                  <a href="#" target="_blank" rel="noopener noreferrer" title="Bitcoin">
+                  <a href="#" target="_blank" rel="noopener noreferrer" title="Bitcoin" class="text-3xl sm:text-4xl">
                     <i class="fab fa-bitcoin"></i>
                   </a>
                 </li>
                 <li>
-                  <a href="#" target="_blank" rel="noopener noreferrer" title="Zelle">
+                  <a href="#" target="_blank" rel="noopener noreferrer" title="Zelle" class="text-3xl sm:text-4xl">
                     <i class="fas fa-university"></i>
                   </a>
                 </li>
@@ -548,17 +566,18 @@
           </div>
 
           <!-- Partner Logos Section -->
-          <h3 class="text-white text-xl sm:text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5 mobile-text-center">
+          <h3 class="text-white text-xl sm:text-2xl font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">
             As Seen On
           </h3>
-          <div class="partner-logos flex flex-wrap justify-center mt-4">
-            <a href="https://honeysucklemag.com/" target="_blank" rel="noopener noreferrer">
-              <img src="https://cdn.getmidnight.com/ee9375a9e35b070b930b27b8e868dc1c/2022/11/Quote_Logo_Magenta_cutout.png"
-                alt="Honeysuckle Magazine Logo" class="h-16 mx-4 mb-4">
+          <div class="partner-logos flex flex-wrap justify-center items-center gap-4 mt-4 px-4">
+            <a href="https://honeysucklemag.com/" target="_blank" rel="noopener noreferrer" class="w-1/2 sm:w-auto">
+              <img
+                src="https://cdn.getmidnight.com/ee9375a9e35b070b930b27b8e868dc1c/2022/11/Quote_Logo_Magenta_cutout.png"
+                alt="Honeysuckle Magazine Logo" class="h-12 sm:h-16 w-auto object-contain">
             </a>
-            <a href="https://www.vice.com/" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.vice.com/" target="_blank" rel="noopener noreferrer" class="w-1/2 sm:w-auto">
               <img src="https://cdn.freebiesupply.com/images/large/2x/vice-logo-transparent.png" alt="VICE Logo"
-                class="h-12 mx-4 mb-4">
+                class="h-8 sm:h-12 w-auto object-contain">
             </a>
             <!-- Add more partner logos here -->
           </div>
@@ -569,14 +588,14 @@
 
     <!-- Footer Section (Same as index.html) -->
     <footer class="site-footer bg-[#111814] py-10">
-      <div class="container mx-auto max-w-[960px]">
+      <div class="container mx-auto max-w-[960px] px-4">
         <nav class="social-navigation">
           <ul class="flex flex-wrap justify-center gap-6 list-none p-0">
             <li>
               <a href="https://www.instagram.com/ganjapigworldwide" target="_blank" rel="noopener noreferrer"
                 class="flex items-center text-[#9db9ab] hover:text-[#13ec80] transition-colors duration-300">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                  viewBox="0 0 256 256" aria-hidden="true" class="mr-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256"
+                  aria-hidden="true" class="mr-2">
                   <path
                     d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z">
                   </path>
@@ -587,8 +606,8 @@
             <li>
               <a href="https://www.instagram.com/thenotoriouspigcollective" target="_blank" rel="noopener noreferrer"
                 class="flex items-center text-[#9db9ab] hover:text-[#13ec80] transition-colors duration-300">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                  viewBox="0 0 256 256" aria-hidden="true" class="mr-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256"
+                  aria-hidden="true" class="mr-2">
                   <path
                     d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z">
                   </path>
@@ -600,7 +619,9 @@
         </nav>
         <div class="site-info text-center mt-6">
           <p class="text-[#9db9ab] text-base font-normal leading-normal">
-            This is a <a href="https://ganjapigs.com" class="text-[#13ec80] hover:underline">Ganja Pigs</a> Event | Budstock 2023 Photography by <a href="https://www.instagram.com/alexlongphotography/" class="text-[#13ec80] hover:underline">Alex Long Photography/</a>
+            This is a <a href="https://ganjapigs.com" class="text-[#13ec80] hover:underline">Ganja Pigs</a> Event |
+            Budstock 2023 Photography by <a href="https://www.instagram.com/alexlongphotography/"
+              class="text-[#13ec80] hover:underline">Alex Long Photography/</a>
           </p>
         </div>
       </div>
